@@ -12,15 +12,31 @@ for (let row_label = 1; row_label <= 8 ; row_label++){
 const board = {
   cells:cells,
   player1:{
-    pieces:{},
+    pieces:{B1: new Piece ('w','B','c','1',cells)},
+    pieces:{B2: new Piece ('w','B','f','1',cells)},
+    pieces:{N1: new Piece ('w','N','b','1',cells)},
+    pieces:{N1: new Piece ('w','N','g','1',cells)},
+    pieces:{R1: new Piece ('w','R','a','1',cells)},
+    pieces:{R2: new Piece ('w','R','h','1',cells)},
+    pieces:{Q: new Piece ('w','Q','e','1',cells)},
+    pieces:{K: new Piece ('w','K','d','1',cells)},
   },
   player2:{
-    pieces:{},
+    pieces:{
+      pieces:{B1: new Piece ('w','B','c','8',cells)},
+      pieces:{B2: new Piece ('w','B','f','8',cells)},
+      pieces:{N1: new Piece ('w','N','b','8',cells)},
+      pieces:{N1: new Piece ('w','N','g','8',cells)},
+      pieces:{R1: new Piece ('w','R','a','8',cells)},
+      pieces:{R2: new Piece ('w','R','h','8',cells)},
+      pieces:{Q: new Piece ('w','Q','e','8',cells)},
+      pieces:{K: new Piece ('w','K','d','8',cells)},
+    },
   }
 }
 for (let pieces = 1; pieces <= 8; pieces++){
-  board.player1.pieces['p'+pieces] = new Piece ('w','p',String.fromCharCode(96+pieces),'2',cells)
-  board.player2.pieces['p'+pieces] = new Piece ('b','p',String.fromCharCode(96+pieces),'7',cells)
+  board.player1.pieces['P'+pieces] = new Piece ('w','P',String.fromCharCode(96+pieces),'2',cells)
+  board.player2.pieces['P'+pieces] = new Piece ('b','P',String.fromCharCode(96+pieces),'7',cells)
 }
 
 export default function handler(req, res) {

@@ -9,7 +9,7 @@ grid-template-columns: repeat(8,1fr);
   background-color: whitesmoke;
 }
 
-.row:nth-child(even) .cell:nth-child(even),
-.row:nth-child(odd) .cell:nth-child(odd){
+.row:nth-child(even) .cell:nth-child(odd),
+.row:nth-child(odd) .cell:nth-child(even){
   background-color: burlywood;
 }
