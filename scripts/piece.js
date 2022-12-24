@@ -5,7 +5,8 @@ export default class Piece{
     this.state = 'alive'
     this.column = column
     this.row = row
-    // this.position = moveTo(column+row)
+    this.position = column+row
+    cells[row-1][column.charCodeAt()-97].piece = this
   }
   // moveTo = (cell) => {
     
