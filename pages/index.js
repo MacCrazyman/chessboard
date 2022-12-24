@@ -2,11 +2,12 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { useCallback, useEffect, useState } from 'react'
 import Board from '../components/Board'
+import Cell from '../scripts/cell'
 import styles from '../styles/Home.module.css'
 
 
 export default function Home() {
-  let [Cells, loadCells] = useState([['a1']])
+  let [Cells, loadCells] = useState([[new Cell('0','0')]])
   const Chessboard = useCallback(async () => {
     const API_response = await fetch('/api/chessboard').then((response)=>response.json())
     loadCells(API_response.board);
