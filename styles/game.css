@@ -1,24 +1,31 @@
 .board .row {
 display: grid;
-grid-template-columns: 20px repeat(8,1fr);
+grid-template-columns: 30px repeat(8,1fr);
 }
-.row-label{
-  width: 20px;
-  height: 50px;
-  border: 1px solid darkred;
-  background-color: brown;
+.row-label,
+.col-label,
+.cell{
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.row-label,
+.col-label{
+  border: 1px solid darkred;
+  background-color: brown;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.col-label{
+  height: 30px;
 }
 
 .cell {
   width: 50px;
   height: 50px;
   background-color: whitesmoke;
-  display:flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .row:nth-child(even) .cell:nth-child(odd),
