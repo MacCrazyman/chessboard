@@ -1,5 +1,5 @@
-export default function Cell() {
+export default function Cell({properties}) {
   return (
-    <div className="cell"></div>
+    <div className="cell">{properties.label}</div>
   )
 }
