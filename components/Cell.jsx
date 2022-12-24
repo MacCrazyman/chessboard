@@ -1,5 +1,21 @@
 export default function Cell({properties}) {
+  let unicodePiece
+  switch (properties.piece.type){
+    case 'K': unicodePiece= 9812
+    break;
+    case 'Q': unicodePiece= 9813
+    break;
+    case 'R': unicodePiece= 9814
+    break;
+    case 'B': unicodePiece= 9815
+    break;
+    case 'N': unicodePiece= 9816
+    break;
+    case 'P': unicodePiece= 9817
+    break;
+  }
+  if (properties.piece.color === 'b') unicodePiece+=6
   return (
-    <div className="cell">{properties.piece.type}</div>
+    <div className="cell">{String.fromCharCode(unicodePiece)}</div>
   )
 }

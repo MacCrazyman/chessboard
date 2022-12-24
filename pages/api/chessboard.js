@@ -23,14 +23,14 @@ const board = {
   },
   player2:{
     pieces:{
-      pieces:{B1: new Piece ('w','B','c','8',cells)},
-      pieces:{B2: new Piece ('w','B','f','8',cells)},
-      pieces:{N1: new Piece ('w','N','b','8',cells)},
-      pieces:{N1: new Piece ('w','N','g','8',cells)},
-      pieces:{R1: new Piece ('w','R','a','8',cells)},
-      pieces:{R2: new Piece ('w','R','h','8',cells)},
-      pieces:{Q: new Piece ('w','Q','e','8',cells)},
-      pieces:{K: new Piece ('w','K','d','8',cells)},
+      pieces:{B1: new Piece ('b','B','c','8',cells)},
+      pieces:{B2: new Piece ('b','B','f','8',cells)},
+      pieces:{N1: new Piece ('b','N','b','8',cells)},
+      pieces:{N1: new Piece ('b','N','g','8',cells)},
+      pieces:{R1: new Piece ('b','R','a','8',cells)},
+      pieces:{R2: new Piece ('b','R','h','8',cells)},
+      pieces:{Q: new Piece ('b','Q','e','8',cells)},
+      pieces:{K: new Piece ('b','K','d','8',cells)},
     },
   }
 }
