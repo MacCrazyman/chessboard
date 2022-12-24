@@ -1,0 +1,1 @@
+export const Piece = () => <div className="piece"></div>

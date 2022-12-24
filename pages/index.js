@@ -1,8 +1,20 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import { useCallback, useEffect, useState } from 'react'
+import Board from '../components/Board'
 import styles from '../styles/Home.module.css'
 
+
 export default function Home() {
+  let [Cells, loadCells] = useState([['a1']])
+  const Chessboard = useCallback(async () => {
+    const API_response = await fetch('/api/chessboard').then((response)=>response.json())
+    loadCells(API_response.board);
+    return API_response
+  },[])
+  useEffect(() => {
+    Chessboard()
+  }, [Chessboard])
   return (
     <div className={styles.container}>
       <Head>
@@ -15,6 +27,9 @@ export default function Home() {
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
+
+          <Board layout={Cells}/>
+
 
         <p className={styles.description}>
           Get started by editing{' '}
