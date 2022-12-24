@@ -1,8 +1,15 @@
+import Piece from "../../scripts/piece"
+
 const cells=[]
 const board = {
   cells:cells,
-  pieces:{
-    
+  player1:{
+    pieces:{
+      p1: Piece ('w','p'),
+      p2: Piece ('w','p'),
+      p3: Piece ('w','p'),
+      p4: Piece ('w','p'),
+  },
   }
 }
 for (let col_label = 97; col_label <= 104 ; col_label++){
