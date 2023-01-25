@@ -18,8 +18,8 @@ const board = {
     pieces:{N1: new Piece ('w','N','g','1',cells)},
     pieces:{R1: new Piece ('w','R','a','1',cells)},
     pieces:{R2: new Piece ('w','R','h','1',cells)},
-    pieces:{Q: new Piece ('w','Q','e','1',cells)},
-    pieces:{K: new Piece ('w','K','d','1',cells)},
+    pieces:{Q: new Piece ('w','Q','d','1',cells)},
+    pieces:{K: new Piece ('w','K','e','1',cells)},
   },
   player2:{
     pieces:{
@@ -29,8 +29,8 @@ const board = {
       pieces:{N1: new Piece ('b','N','g','8',cells)},
       pieces:{R1: new Piece ('b','R','a','8',cells)},
       pieces:{R2: new Piece ('b','R','h','8',cells)},
-      pieces:{Q: new Piece ('b','Q','e','8',cells)},
-      pieces:{K: new Piece ('b','K','d','8',cells)},
+      pieces:{Q: new Piece ('b','Q','d','8',cells)},
+      pieces:{K: new Piece ('b','K','e','8',cells)},
     },
   }
 }
