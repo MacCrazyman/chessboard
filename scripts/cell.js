@@ -1,13 +1,6 @@
 export default class Cell{
   constructor(column,row){
-    this.piece = {
-      color:'',
-      type:'',
-      state:'',
-      column:'',
-      row:'',
-      position:'',
-    }
+    this.piece = null
     this.row = row
     this.column = column
     this.label = column+row

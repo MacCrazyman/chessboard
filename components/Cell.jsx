@@ -1,6 +1,7 @@
-export default function Cell({properties}) {
-  let unicodePiece
-  switch (properties.piece.type){
+export default function Cell({properties,method}) {
+  
+  let unicodePiece= 160
+  switch (properties.piece?.type){
     case 'K': unicodePiece= 9812
     break;
     case 'Q': unicodePiece= 9813
@@ -14,8 +15,8 @@ export default function Cell({properties}) {
     case 'P': unicodePiece= 9817
     break;
   }
-  if (properties.piece.color === 'b') unicodePiece+=6
+  if (properties.piece?.color === 'b') unicodePiece+=6
   return (
-    <div className="cell">{String.fromCharCode(unicodePiece)}</div>
+    <div className="cell" onClick={()=>method(properties)}>{String.fromCharCode(unicodePiece)}</div>
   )
 }
